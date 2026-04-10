@@ -111,3 +111,58 @@ p {
   line-height: 1.72;
   margin-bottom: 3.5rem;
 }
+
+
+/* ── Mobile centering ───────────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Section labels and headlines center on mobile */
+  .section-label {
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .section-intro {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  /* Hero centered on mobile */
+  .hero-inner {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-sub {
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .pill-tag {
+    align-self: center;
+  }
+
+  /* Gap body — keep left for long prose, just center the conclusion */
+  .gap-conclusion {
+    text-align: center;
+  }
+
+  /* Steps — center the note */
+  .steps-note {
+    text-align: center;
+  }
+
+  .section-how .btn,
+  .section-changes .btn {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
