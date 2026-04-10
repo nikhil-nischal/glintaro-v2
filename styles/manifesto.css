@@ -6,8 +6,26 @@
 .section-manifesto {
   padding: var(--section-py) 0;
   background: var(--bg-manifesto);
-  border-top: 1px solid rgba(200, 255, 0, 0.08);
-  border-bottom: 1px solid rgba(200, 255, 0, 0.08);
+  border-top: 1px solid rgba(200, 255, 0, 0.15);
+  border-bottom: 1px solid rgba(200, 255, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle top-center glow to anchor the section visually */
+.section-manifesto::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 260px;
+  background: radial-gradient(ellipse at center,
+    rgba(200, 255, 0, 0.05) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
 }
 
 .section-manifesto .section-label {
