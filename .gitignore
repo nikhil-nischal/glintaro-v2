@@ -13,5 +13,8 @@
 *.swo
 *~
 
+# Claude Code
+.claude/
+
 # Misc
 *.log
