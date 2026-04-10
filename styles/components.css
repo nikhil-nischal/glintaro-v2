@@ -105,15 +105,16 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.38rem 0.85rem;
-  border: 1px solid var(--accent-border);
+  padding: 0.42rem 1rem;
+  border: 1px solid rgba(200, 255, 0, 0.35);
   border-radius: 100px;
-  background: var(--accent-glow-soft);
+  background: rgba(200, 255, 0, 0.09);
   font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.03em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
   color: var(--accent);
   width: fit-content;
+  box-shadow: 0 0 12px rgba(200, 255, 0, 0.08);
 }
 
 /* Animated pulse dot inside pill tag */

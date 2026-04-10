@@ -47,6 +47,16 @@
   flex-shrink: 0;
 }
 
+/* Social proof line below metrics */
+.trust-proof {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-top: 1.75rem;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+}
+
 @media (max-width: 560px) {
   .trust-divider { display: none; }
   .trust-bar { gap: 2.25rem; }

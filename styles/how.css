@@ -66,6 +66,12 @@
   margin-top: 0.5rem;
 }
 
+/* CTA bridge at bottom of Craft section, before Fit */
+.craft-cta {
+  text-align: center;
+  padding-top: 3rem;
+}
+
 
 /* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 500px) {
