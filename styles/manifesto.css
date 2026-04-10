@@ -1,0 +1,59 @@
+/* ============================================================
+   GLINTARO — manifesto.css
+   "Our Position" — visually distinct from all other sections.
+   ============================================================ */
+
+.section-manifesto {
+  padding: var(--section-py) 0;
+  background: var(--bg-manifesto);
+  border-top: 1px solid rgba(200, 255, 0, 0.08);
+  border-bottom: 1px solid rgba(200, 255, 0, 0.08);
+}
+
+.section-manifesto .section-label {
+  text-align: center;
+}
+
+/* ── Body ───────────────────────────────────────────────────── */
+.manifesto-body {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.manifesto-opener {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(1.3rem, 2.5vw, 1.85rem) !important;
+  color: var(--text) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.01em;
+}
+
+.manifesto-body > p {
+  font-size: clamp(1rem, 1.6vw, 1.1rem);
+  line-height: 1.72;
+}
+
+/* ── Anchor lines — the quotable three ─────────────────────── */
+.manifesto-anchor {
+  padding: 2rem 1.5rem;
+  border-top: 1px solid var(--border-solid);
+  border-bottom: 1px solid var(--border-solid);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.manifesto-anchor p {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(1rem, 1.8vw, 1.3rem) !important;
+  color: var(--text) !important;
+  line-height: 1.55 !important;
+  letter-spacing: -0.005em;
+}

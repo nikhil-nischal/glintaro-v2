@@ -1,0 +1,286 @@
+/* ============================================================
+   GLINTARO — sections.css
+   The Gap, The Difference, The Cost, What Changes,
+   The Craft, Fit. Shared card/grid patterns.
+   ============================================================ */
+
+/* ── Shared section padding ─────────────────────────────────── */
+.section-gap,
+.section-difference,
+.section-cost,
+.section-changes,
+.section-craft,
+.section-fit {
+  padding: var(--section-py) 0;
+}
+
+/* Subtle alternate-row background tint */
+.section-cost,
+.section-craft {
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.section-gap h2,
+.section-difference h2,
+.section-cost h2,
+.section-changes h2,
+.section-craft h2,
+.section-fit h2 {
+  margin-bottom: 2rem;
+}
+
+.section-cost h2,
+.section-craft h2 {
+  max-width: 680px;
+}
+
+
+/* ────────────────────────────────────────────────────────────
+   THE GAP
+──────────────────────────────────────────────────────────── */
+.gap-body {
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.gap-body p {
+  font-size: clamp(0.96rem, 1.5vw, 1.08rem);
+}
+
+.gap-conclusion {
+  color: var(--text) !important;
+  font-weight: 500;
+}
+
+
+/* ────────────────────────────────────────────────────────────
+   THE DIFFERENCE — Comparison table
+──────────────────────────────────────────────────────────── */
+.comparison-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--border-solid);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: 3rem;
+}
+
+.comparison-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.comp-left  { background: var(--red-soft); }
+.comp-right {
+  background: var(--accent-glow-soft);
+  border-left: 1px solid var(--border-solid);
+}
+
+.comparison-header {
+  padding: 1.1rem 1.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-solid);
+}
+
+.comp-right .comparison-header {
+  color: var(--accent);
+}
+
+.comparison-row {
+  flex: 1;
+  padding: 1.05rem 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-solid);
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.comp-right .comparison-row {
+  color: var(--text);
+}
+
+@media (max-width: 600px) {
+  .comparison-table {
+    grid-template-columns: 1fr;
+  }
+
+  .comp-right {
+    border-left: none;
+    border-top: 1px solid var(--border-solid);
+  }
+}
+
+
+/* ────────────────────────────────────────────────────────────
+   CARDS GRID  (used in Cost and What Changes)
+──────────────────────────────────────────────────────────── */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.section-changes .cards-grid {
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-solid);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+
+.card h3 {
+  margin-bottom: 0.6rem;
+  font-size: 0.98rem;
+}
+
+.card p {
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+
+/* ────────────────────────────────────────────────────────────
+   THE CRAFT — Principle cards
+──────────────────────────────────────────────────────────── */
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.principle {
+  background: var(--bg-card);
+  border: 1px solid var(--border-solid);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.principle:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+
+.principle-number {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--text-dim);
+  line-height: 1;
+  margin-bottom: 0.9rem;
+}
+
+.principle h3 {
+  margin-bottom: 0.6rem;
+  font-size: 0.98rem;
+}
+
+.principle p {
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 580px) {
+  .principles-grid { grid-template-columns: 1fr; }
+}
+
+
+/* ────────────────────────────────────────────────────────────
+   FIT
+──────────────────────────────────────────────────────────── */
+.fit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.fit-col {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-solid);
+  padding: 2.25rem 2rem;
+}
+
+.fit-yes {
+  background: rgba(200, 255, 0, 0.035);
+  border-color: var(--accent-border);
+}
+
+.fit-no {
+  background: var(--red-soft);
+  border-color: var(--red-border);
+}
+
+.fit-col h3 {
+  font-size: 0.88rem;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+}
+
+.fit-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.fit-col li {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  padding-left: 1.6rem;
+  position: relative;
+}
+
+.fit-yes li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.fit-no li::before {
+  content: '✗';
+  position: absolute;
+  left: 0;
+  color: var(--red-icon);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .fit-grid { grid-template-columns: 1fr; }
+}
+
+
+/* ── Responsive shared ──────────────────────────────────────── */
+@media (max-width: 720px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

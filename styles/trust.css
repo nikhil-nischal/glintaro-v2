@@ -1,0 +1,53 @@
+/* ============================================================
+   GLINTARO — trust.css
+   ============================================================ */
+
+.section-trust {
+  border-top: 1px solid var(--border-solid);
+  border-bottom: 1px solid var(--border-solid);
+  padding: 2.75rem 0;
+}
+
+.trust-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.trust-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  text-align: center;
+}
+
+.trust-number {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  color: var(--text);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.trust-label {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  max-width: 180px;
+  line-height: 1.4;
+}
+
+.trust-divider {
+  width: 1px;
+  height: 3rem;
+  background: var(--border-solid);
+  flex-shrink: 0;
+}
+
+@media (max-width: 560px) {
+  .trust-divider { display: none; }
+  .trust-bar { gap: 2.25rem; }
+}

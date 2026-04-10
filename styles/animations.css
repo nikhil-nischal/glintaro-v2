@@ -1,0 +1,69 @@
+/* ============================================================
+   GLINTARO — animations.css
+   Fade-in scroll system, keyframe animations.
+   ============================================================ */
+
+/* ── Fade-in scroll system ──────────────────────────────────── */
+/*
+  Usage: add class="fi" to any element you want to fade up on scroll.
+  Add d1/d2/d3/d4 for staggered reveal within the same group.
+
+  Example:
+    <span class="section-label fi">THE GAP</span>
+    <h2 class="fi d1">Headline</h2>
+    <p  class="fi d2">Body copy</p>
+*/
+.fi {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.65s ease,
+              transform 0.65s ease;
+}
+
+.fi.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays */
+.fi.d1 { transition-delay: 0.10s; }
+.fi.d2 { transition-delay: 0.20s; }
+.fi.d3 { transition-delay: 0.30s; }
+.fi.d4 { transition-delay: 0.40s; }
+
+
+/* ── Keyframe animations ────────────────────────────────────── */
+
+/* Pulse ring — pill tag dot */
+@keyframes pulse-ring {
+  0%, 100% { transform: scale(1);   opacity: 0.35; }
+  50%       { transform: scale(2.2); opacity: 0; }
+}
+
+/* Floating orb — hero center (slow, large) */
+@keyframes float-orb-center {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-24px); }
+}
+
+/* Floating orb — hero side (slower, subtle) */
+@keyframes float-orb-side {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-18px); }
+}
+
+
+/* ── Accessibility ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .fi {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .section-hero::before,
+  .section-hero::after,
+  .pulse-dot::after {
+    animation: none;
+  }
+}
